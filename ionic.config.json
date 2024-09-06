@@ -1,0 +1,7 @@
+{
+  "name": "ContactListApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

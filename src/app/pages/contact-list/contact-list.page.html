@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contacts</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/contact-detail', 'new']">Add Contact</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchContacts()"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let contact of contacts" (click)="viewContact(contact.id)">
+      <ion-label>
+        <h2>{{ contact.name }}</h2>
+        <p>{{ contact.number }}</p>
+        <p>{{ contact.email }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
